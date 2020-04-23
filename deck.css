@@ -6,6 +6,11 @@ li p {
   margin: 0;
 }
 
+.what-is-gatsby {
+  width: 60%;
+  text-align: center;
+}
+
 .quotes {
   display: flex;
   flex-direction: column;
@@ -61,7 +66,7 @@ li p {
 }
 
 .quote blockquote::before {
-  content: '\201C';
+  content: "\201C";
   color: white;
   font-size: 9em;
   font-weight: 600;

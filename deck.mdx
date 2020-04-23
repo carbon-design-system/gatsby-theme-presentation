@@ -22,19 +22,25 @@ import chart from "./compare-cra-gatsby-next.png";
 ## Agenda
 
 - What is Gatsby?
-- Carbon website story
+- Carbon website background
 - Carbon’s Gatsby theme
-- wrap up
-
----
-
-# Background
+- In the wild
 
 ---
 
 # What is Gatsby?
 
-TODO
+<div className="what-is-gatsby">
+  “Gatsby is a free and open source framework based on React that helps
+  developers build blazing fast websites and apps”
+</div>
+
+<Notes>
+
+- Static site generator
+- in the same space as Next.js, create-react-app (meta framework)
+
+</Notes>
 
 ---
 
@@ -76,7 +82,7 @@ TODO
 
 ---
 
-# What are themes
+# What are Gatsby themes?
 
 - collection of plugins and configuration for Gatsby
 - tucked behind a single dependancy
@@ -93,9 +99,11 @@ Last note === Progressive disclosure of complexity, NO BLOCKERS
 # gatsby-theme-carbon
 
 - https://gatsby-theme-carbon.now.sh
-- Carbon’s open source gatsby theme
-- used by dozens of internal and external projects
-- quickly and easily publish sites that look and feel like Carbon
+- Carbon’s open source gatsby theme (206 ⭐)
+- 79 sites on public GitHub
+- 130 sites on GitHub enterprise
+
+<Notes>Quickly and easily publish sites that look and feel like Carbon</Notes>
 
 ---
 
@@ -129,31 +137,41 @@ Last note === Progressive disclosure of complexity, NO BLOCKERS
 - “Just add markdown”
 - Gatsby best practices
 - modern Carbon development environment
-- core ui with Carbon shell and layout components
+- preconfigured Carbon shell and layout
+- helpful React components for use in markdown (MDX)
 
 <Notes>
 
-- Carbon dev env: quickly speak the IBM design language
-- site wide search
+# Carbon dev env: quickly speak the IBM design language
+
+# core shell: site wide search
 
 </Notes>
 
 ---
 
-#### What is shadowing? _or_ “Why the theme can't be a blocker”
-
-<Appear>
-
-Allows developers to augment or replace any theme file
-Shadowed files go in a special directory (`src/gatsby-theme-carbon/`).
-Anything in this folder replaces the theme’s version.
-The theme will reach for _your_ component first.
-
-</Appear>
+<Demo
+  src="https://gatsby-theme-carbon.now.sh/components/Accordion"
+  title="Gatsby Theme Carbon MDX components"
+/>
 
 <Notes>
 
-# Content heavy slide
+- Show components available to content authors in the theme
+
+</Notes>
+
+---
+
+### What is shadowing? _or_ “Why the theme can't be a blocker”
+
+- allows developers to modify or replace any theme file
+- shadowed files go in `src/gatsby-theme-carbon/`
+- anything in this folder replaces the theme’s version
+
+<Notes>
+
+# theme reaches for _your_ component first
 
 </Notes>
 
@@ -163,15 +181,13 @@ The theme will reach for _your_ component first.
 
 - sass – `components/Markdown.module.scss`
 - data – `components/Code/prismTheme.js`
-- components - `components/FeedbackDialog.js`
+- core components - `components/FeedbackDialog.js`
+- content components - `components/markdown/blockquote.js`
 
 <Notes>
 
-## - Hooks are a new react API that allow you to encapsulate logic/behavior
-
-## - shadowing hook to provide 3rd party search
-
-## - reveals Feedback component
+- core = infrastructure/shell components
+- content components are components available to authors in markdown
 
 </Notes>
 
@@ -199,14 +215,17 @@ The theme will reach for _your_ component first.
 
 ---
 
+# gatsby-theme-carbon in the wild
+
+---
+
 <Demo src="https://www.carbondesignsystem.com" title="Carbon" />
 
 <Notes>
 
-- ## Switcher
-- Feedback (forms), serverless function
-- Sitewide search
-- ## Familiar navigation/IA
+## Sitewide search
+
+## Feedback (forms), serverless function
 
 </Notes>
 
@@ -224,7 +243,10 @@ The theme will reach for _your_ component first.
 
 ---
 
-<Demo src="https://pages.github.ibm.com/ibmcloud/pal/" title="Cloud PAL" />
+<Demo
+  src="https://pages.github.ibm.com/ibmcloud/pal/"
+  title="IBM Cloud pattern asset library"
+/>
 
 <Notes>
 
@@ -235,32 +257,40 @@ The theme will reach for _your_ component first.
 
 ---
 
-# Carbon Gatsby theme takeaway
+# More examples
+
+- [IBM Brand center](https://ibm.com/brand)
+- [IBM Garage Cloud Native Bootcamp](https://pages.github.ibm.com/CASE/cloudnative-bootcamp/)
+- [IBM Design for AI](https://ibm.com/design/research)
+- [IBM Event Design](https://www.ibm.com/design/event/)
+
+---
+
+# Carbon Gatsby theme takeaways
 
 <ul>
   <li>empowers content authors</li>
   <Appear>
-    <li>saves developers time and overhead</li>
+    <li>saves developer time and overhead</li>
     <li>encourages community contribution</li>
-    <li>magnify development efforts</li>
   </Appear>
 </ul>
 
 <Notes>
 
-- ## content authors and designers contribute like never before
+- ## We have designers, developers, content folks from all sorts of background authoring and updating content
 
 </Notes>
 
 ---
 
-# I can talk more about
+# I can talk more about:
 
-- cost saving with the Carbon theme
-- how the theme can't be a blocker
-- the theme as an ecosystem for contribution
-- future of the theme
-- common hurdles
+1. Generating value, cost savings
+1. ecosystem of collaboration
+1. common challenges
+1. shadowing in depth
+1. future of the theme
 
 ---
 
