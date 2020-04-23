@@ -21,7 +21,7 @@ const Intro = () => (
     <span
       style={{ margin: 0, fontSize: '32px', top: '0.5rem', position: 'relative', fontWeight: 300, zIndex: '4', textShadow: '0px 6px 6px rgba(0,0,0,0.3)' }}
     >
-      Vince Picone – Carbon team lead
+      Vince Picone – Carbon Design team lead
     </span>
     <Hexagon
       style={{

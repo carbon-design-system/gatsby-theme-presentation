@@ -10,6 +10,17 @@ ul {
   list-style: "– ";
 }
 
+.footer {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 1.5rem;
+}
+
+.footer a {
+  color: white;
+}
+
 @font-face {
   font-family: "IBM Plex Sans";
   unicode-range: U+0020-00FF;
