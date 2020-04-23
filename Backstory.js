@@ -1,7 +1,5 @@
 import React from 'react';
 
-import tweetGif from './tweet.gif';
-
 const Backstory = () => (
   <div
     style={{
@@ -16,7 +14,6 @@ const Backstory = () => (
       <li>Rebuilt using Gatsby and MDX</li>
       <li>Other teams at IBM wanted in</li>
     </ul>
-    <img src={tweetGif} alt="carbon gatsby migration gif" />
   </div>
 );
 

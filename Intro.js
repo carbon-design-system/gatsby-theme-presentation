@@ -16,12 +16,12 @@ const Intro = () => (
     </h1>
     <Hexagon style={{ left: '0', top: '30vh', zIndex: '0', width: '55vw' }} />
     <h3 style={{ margin: 0, marginTop: '-1rem', zIndex: '4', fontWeight: 600 }}>
-      Aug 6th 2019 FEDucation
+      April 23 2020 Design System Guild
     </h3>
     <span
       style={{ margin: 0, fontSize: '32px', top: '0.5rem', position: 'relative', fontWeight: 300, zIndex: '4' }}
     >
-      Josef Aidt, Scott Strubberg, and Vince Picone
+      Vince Picone – Carbon dev lead
     </span>
     <Hexagon
       style={{

@@ -8,12 +8,11 @@ import "./deck.css";
 import Hexagon from "./Hexagon";
 import Intro from "./Intro.js";
 export const theme = DeckTheme;
-import Backstory from "./Backstory.js";
 
 import chart from "./compare-cra-gatsby-next.png";
 
 <Head>
-  <title>FEDucation</title>
+  <title>Gatsby @ IBM Design</title>
 </Head>
 
 <Intro />
@@ -22,246 +21,28 @@ import chart from "./compare-cra-gatsby-next.png";
 
 ## Agenda
 
-- React, Gatsby and MDX
-- Git Monorepos
-- Gatsby Themes
-- Gatsby Themes at IBM
-
-<Notes>
-
-@vince @scott I think ending on Gatsby Themes is a good transition point that way I can kind of gloss over the idea and yall pull it in with additional thoughts and the practical application, transitioning into yalls piece
-
-</Notes>
+- What is Gatsby?
+- Carbon website story
+- Carbon’s Gatsby theme
+- wrap up
 
 ---
 
-## React & Gatsby
-
-<p style={{maxWidth: '80vw'}}>"Gatsby is a free and open source framework based on React that helps developers build blazing fast websites and apps"</p>
-
-
-<Notes>
-
-React is a component-driven JavaScript framework Gatsby is known as a SSG, with a React & GraphQL development experience
-
-Gatsby removes the pipeline headache of React development (from a purist and CRA standpoint)
-
-- choosing and setting up Router
-- chasing the perfect Webpack config (bundle size, code splitting for load prioritization, effective tree shaking, etc)
-- perfecting Babel config
-
-</Notes>
+# Background
 
 ---
 
-# Gatsby
+# What is Gatsby?
 
-- Query data with GraphQL (site metadata)
-- Built-in routing, image lazy-loading, build pipeline
-- use data from anywhere with `gatsby-source-*` modules
-- diverse plugin ecosystem
-- builds to static assets
-
-<Notes>
-
-https://www.gatsbyjs.org/docs/querying-with-graphql/
-
-Example plugins:
-
-- gatsby-plugin-mdx
-- gatsby-source-filesystem
-- gatsby-transformer-yaml
-- gatsby-source-contentful
-- gatsby-plugin-manifest
-
-</Notes>
+TODO
 
 ---
 
-## MDX
-
-MDX is a superset of markdown<br />
-Markdown for the component era<br />
-Use React components in your content
-
-<Notes>
-
-Much easier to read at a fast pace than HTML easy to write, small learning curve
-
-</Notes>
-
----
-
-```jsx
----
-title: Analytics Dashboard
----
-
-import Chart from "../components/Chart";
-
-# App Metrics
-
-<div style={{ padding: "1rem 2rem" }}>
-  <Chart />
-</div>
-```
-
-<Notes>
-
-Sample file demonstrating using JSX in Markdown
-
-- frontmatter (think metadata for content)
-- component import and use
-- inline HTML with JSX style attributes
-
-</Notes>
-
----
-
-```jsx
----
-title: Analytics Dashboard
-description: Application metrics...
-tags: ["analytics", "metrics", "dashboard"]
----
-
-# App Metrics
-
-<div style={{ padding: "1rem 2rem" }}>
-  <Chart />
-</div>
-```
-
-<Notes>
-
-Sample personal site MDX home page w/ expanded frontmatter for use with `react-helmet`
-
-- custom shortcode: `Chart`
-- added frontmatter keys to inject in SEO; `head`
-- title can be added to tab title with a template; `Analytics Dashboard | My Site`
-- SEO tags can be appended to tags set as global
-
-https://www.gatsbyjs.org/packages/gatsby-plugin-react-helmet/?=helmet
-
-</Notes>
-
----
-
-## Git Monorepos
-single Git repository with multiple project roots
-
-```shell
-| packages/
-|   -- example-site/
-|      -- package.json
-|   -- components/
-|      -- package.json
-| package.json
-```
-
-<Notes>
-
-The idea is to have multiple project roots in a single repository These can be tightly or loosely-coupled, or completely unrelated This architecture has shown to be quite prominent with React projects, paramount for composing Gatsby themes
-
-Examples of packages:
-
-- components
-- tools
-- theme
-- app/site
-
-w/ yarn workspaces (or also lerna)
-
-Fun with workspaces (see https://github.com/gatsbyjs/gatsby):
-
-- all subdirectories do _not_ have to be in the array of root's workspaces declared in `/package.json`
-- but subdirectories themselves can also be workspaces roots
-
-</Notes>
-
----
-
-# Git Monorepos
-
-Used with [Yarn workspaces](https://yarnpkg.com/lang/en/docs/workspaces/) at the project root
-
-```shell
-# install dependencies
-yarn install
-
-# run Gatsby example-site
-yarn workspace example-site run start
-```
-
-<Notes>
-
-PROS:
-
-- Project dependencies are installed together
-- Will install local dependency first (if exists), then reaches to registry
-- Single lockfile
-- can lock project versions across packages
-
-CONS:
-
-- locked project versions across packages
-- larger footprint
-- loss of per-project security
-
-https://yarnpkg.com/lang/en/docs/workspaces/ https://en.wikipedia.org/wiki/Monorepo
-
-</Notes>
-
----
-
-# Gatsby Themes
-
-> horizontally-composed layers for Gatsby sites
-
-<Notes>
-
-@vince we can transition here
-
-PROS:
-
-- used to add layers of functionality
-  - blog, glossary
-  - (or just data) Shopify, weather
-
-</Notes>
-
----
-
-<iframe
-  src="https://themejam.gatsbyjs.org/showcase"
-  frameborder="0"
-  width="90%"
-  height="90%"
-/>
-
-<Notes>
-
-We can omit this if we want, placeholder to show examples of community themes
-
-</Notes>
-
----
-
-<h2 ><a style={{color: 'white'}} href="https://gatsby-theme-carbon.now.sh">https://gatsby-theme-carbon.now.sh</a></h2>
-
----
-
-# Outline
-
-1. Carbon's website backstory – 🌧️
-1. Enter Gatsby themes – 🌤️
-1. Aha! moments of themes – ☀️
-
----
-
-# Carbon's website backstory
-
-<Backstory />
+# Carbon’s website backstory
+
+- started as a standard React project
+- rebuilt using Gatsby
+- other teams at IBM wanted in
 
 <Notes>
 
@@ -283,12 +64,11 @@ We can omit this if we want, placeholder to show examples of community themes
 
 ---
 
-# Other teams at IBM wanted in
+# Other teams wanted in
 
-- Process was to fork and copy the Carbon website
-- Needed to understand configuration settings
-- No design updates
-- No bug fixes
+- forked the Carbon website
+- stuck with Gatsby configuration settings
+- no design updates, new features, or bug fixes
 
 ---
 
@@ -296,75 +76,80 @@ We can omit this if we want, placeholder to show examples of community themes
 
 ---
 
-# Big wins with Gatsby themes
+# What are themes
 
-- Development speed
-- Visual solidarity
-- Shared features and fixes
-- Theme-managed configuration
+- collection of plugins and configuration for Gatsby
+- tucked behind a single dependancy
+- every file is can be overriden (shadowed) individually
 
 <Notes>
 
-- speed
-  - Broke ground April 15th,
-  - 2 teams with June 1st deadline (45 days)
-  - both teams with 0 no react and no gatsby experience
-  - 3. Both hit June 1st deadline
-- unity through core UI components and global MDX
-- community envolvement grew due to shared tooling
-  - in core theme components (edit in Github)
-  - in MDX content components
-- only manage the dependancies & config you want (progressive disclosure)
-
-## transition: big win for devs, shadowing another new big win
+Last note === Progressive disclosure of complexity, NO BLOCKERS
 
 </Notes>
 
 ---
 
-## Revelations while building with themes
+# gatsby-theme-carbon
 
-1. Oh wow. Actually just writing fancy markdown tho
-1. Can't be blocked by theme
-1. Immense power of shadowing
+- https://gatsby-theme-carbon.now.sh
+- Carbon’s open source gatsby theme
+- used by dozens of internal and external projects
+- quickly and easily publish sites that look and feel like Carbon
+
+---
+
+# Immediate wins
+
+- development speed
+- visual solidarity
+- shared features and fixes
+- community involvement
+- developer portability
 
 <Notes>
 
-# In order
+1. paint you a picture
 
-## - 2. big selling point for teams considering
+- broke ground this time last year
+- two teams with no react/gatsby experience
+- both finished their projects under their 2 mos deadline
+
+2. unity through core UI components and shared markdown components
+3. Shared features/fixes, mitigate entire class of issues from forking
+4. shared tooling = shared work, community components
+5. comfortable going between familiar projects
 
 </Notes>
 
 ---
 
-# What is shadowing?
+# What does the theme give you?
 
-<ul>
-<li>Allows developers to augment or replace files in a theme</li>
+- “Just add markdown”
+- Gatsby best practices
+- modern Carbon development environment
+- core ui with Carbon shell and layout components
+
+<Notes>
+
+- Carbon dev env: quickly speak the IBM design language
+- site wide search
+
+</Notes>
+
+---
+
+#### What is shadowing? _or_ “Why the theme can't be a blocker”
 
 <Appear>
 
-<li>Shadowed files go in directory named after the theme
-<ul>
-<li className="list-p">
-
-ex. `src/gatsby-theme-carbon/components/Footer.js`
-
-</li>
-<li>anything in this folder replaces the theme's version</li>
-</ul>
-</li>
-<li>
-
-The theme will reach for _your_ component first
-
-</li>
-<li>Shadowed components receive same props</li>
+Allows developers to augment or replace any theme file
+Shadowed files go in a special directory (`src/gatsby-theme-carbon/`).
+Anything in this folder replaces the theme’s version.
+The theme will reach for _your_ component first.
 
 </Appear>
-
-</ul>
 
 <Notes>
 
@@ -374,78 +159,11 @@ The theme will reach for _your_ component first
 
 ---
 
-# Shadowing revelations
+# You can shadow _everything_
 
-<img style={{ width: "60vw" }} src={Wow} />
-
-<span style={{fontWeight: 300, fontSize: '0.6em', color: 'darkgrey', position: 'absolute', bottom: '-0.5em'}}>
-
-**note:** the Carbon designers did not approve this slide
-
-</span>
-
-<Notes>
-
-# At least the first one to get rid of filler content
-
-</Notes>
-
----
-
-# Shadow to provide props
-
-```jsx
-import Header from "gatsby-theme-carbon/src/components/Header";
-
-const CustomHeader = props => (
-  <Header {...props}>
-    <span>Gatsby theme </span>Carbon
-  </Header>
-);
-
-export default CustomHeader;
-```
-
-<Notes>
-
-# Don't forget to spread props
-
-</Notes>
-
----
-
-# Shadow whole components
-
-```jsx
-import { styles } from "@carbon/type";
-
-const CustomHeader = styled.span({
-  ...styles.expressiveHeading04
-});
-
-export default props => {
-  console.log(props);
-  return <CustomHeader>Gatsby Theme Carbon</CustomHeader>;
-};
-```
-
-<Notes>
-
-# Here we're creating our own novel component
-
-# no need to import
-
-# Log to view props
-
-</Notes>
-
----
-
-# Shadow _everything_
-
-- Sass – `src/components/Markdown.module.scss`
-- Data – `src/components/Code/prismTheme.js`
-- Hooks - `src/util/hooks/useSearch.js`
+- sass – `components/Markdown.module.scss`
+- data – `components/Code/prismTheme.js`
+- components - `components/FeedbackDialog.js`
 
 <Notes>
 
@@ -453,7 +171,7 @@ export default props => {
 
 ## - shadowing hook to provide 3rd party search
 
-## - reveals search component
+## - reveals Feedback component
 
 </Notes>
 
@@ -461,9 +179,9 @@ export default props => {
 
 # Shadowing guidelines
 
-1. Communication
-1. Less is more
-1. Communication
+1. communication
+1. less is more
+1. communication
 
 <Notes>
 
@@ -471,7 +189,7 @@ export default props => {
 
 ## - Shadow as few files as you can to achieve your goal
 
-## - If you do shadow, tell the theme developer, used to inform future development
+## - If you do shadow, tell us. Used to inform future development
 
 </Notes>
 
@@ -481,40 +199,32 @@ export default props => {
 
 ---
 
-## Building with themes<br />Scott Strubberg
-
-- Fairly simple learning curve
-- Flexibility: easily use React while adhering to IDL
-- #carbon-gatsby-theme channel
-
----
-
-<Demo src="https://idr-public.netlify.com/" title="IBM Design Research" />
+<Demo src="https://www.carbondesignsystem.com" title="Carbon" />
 
 <Notes>
 
 - ## Switcher
+- Feedback (forms), serverless function
+- Sitewide search
 - ## Familiar navigation/IA
 
 </Notes>
 
 ---
 
-<Demo
-  src="https://design-language-website.netlify.com/"
-  title="IBM Design Language"
-/>
+<Demo src="https://www.ibm.com/design/language" title="IBM Design Language" />
 
 <Notes>
 
 - ## Switcher
+- ## Bespoke components like icon search
 - ## Familiar navigation/IA
 
 </Notes>
 
 ---
 
-<Demo src="https://www.ibm.com/design/ai/" title="IBM Design for AI" />
+<Demo src="https://pages.github.ibm.com/ibmcloud/pal/" title="Cloud PAL" />
 
 <Notes>
 
@@ -525,15 +235,14 @@ export default props => {
 
 ---
 
-# Gatsby Theme takeaways
+# Carbon Gatsby theme takeaway
 
 <ul>
-  <li>Themes empower content authors</li>
+  <li>empowers content authors</li>
   <Appear>
-    <li>Themes save developers time and overhead</li>
-    <li>Themes encourage community contribution</li>
-    <li>Themes align teams on form and function</li>
-    <li>Shadow things. Not too much. Mostly to provide props.</li>
+    <li>saves developers time and overhead</li>
+    <li>encourages community contribution</li>
+    <li>magnify development efforts</li>
   </Appear>
 </ul>
 
@@ -541,14 +250,23 @@ export default props => {
 
 - ## content authors and designers contribute like never before
 
-- ## also complexity overhead
-
 </Notes>
 
 ---
 
-# Thanks!
+# I can talk more about
+
+- cost saving with the Carbon theme
+- how the theme can't be a blocker
+- the theme as an ecosystem for contribution
+- future of the theme
+- common hurdles
 
 ---
 
-# Q & A
+# More info
+
+- https://gatsby-theme-carbon.now.sh
+- <a href="https://ibm-studios.slack.com/messages/carbon-gatsby-theme">
+    #gatsby-theme-carbon
+  </a> slack channel
