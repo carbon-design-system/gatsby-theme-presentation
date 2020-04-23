@@ -1,8 +1,6 @@
 import Code from './Code';
 
 const theme = {
-  googleFont:
-    'https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans:300,300i,400,400i,600,600i&display=swap',
   fontWeights: {
     body: 400,
     heading: 600,
