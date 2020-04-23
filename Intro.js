@@ -15,13 +15,13 @@ const Intro = () => (
       Gatsby themes at IBM
     </h1>
     <Hexagon style={{ left: '0', top: '30vh', zIndex: '0', width: '55vw' }} />
-    <h3 style={{ margin: 0, marginTop: '-1rem', zIndex: '4', fontWeight: 600 }}>
-      April 23 2020 Design System Guild
-    </h3>
+    <h4 style={{ margin: 0, marginTop: '-1rem', zIndex: '4', fontWeight: 600, textShadow: '0px 6px 6px rgba(0,0,0,0.3)' }}>
+      slides: <a style={{color: 'white'}} href="https://gatsby-themes-at-ibm.now.sh">https://gatsby-themes-at-ibm.now.sh</a>
+    </h4>
     <span
-      style={{ margin: 0, fontSize: '32px', top: '0.5rem', position: 'relative', fontWeight: 300, zIndex: '4' }}
+      style={{ margin: 0, fontSize: '32px', top: '0.5rem', position: 'relative', fontWeight: 300, zIndex: '4', textShadow: '0px 6px 6px rgba(0,0,0,0.3)' }}
     >
-      Vince Picone – Carbon dev lead
+      Vince Picone – Carbon team lead
     </span>
     <Hexagon
       style={{
