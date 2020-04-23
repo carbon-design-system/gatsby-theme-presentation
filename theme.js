@@ -9,14 +9,17 @@ const theme = {
     bold: 600,
   },
   colors: {
-    text: '#f3f3f3',
-    background: '#171717',
+    text: '#f4f4f4',
+    background: '#262626',
     primary: '#0062ff',
     secondary: '#6f6f6f',
     accent: '#ffffff',
     muted: '#dcdcdc',
   },
   styles: {
+    a: {
+      color: "#78a9ff"
+    },
     inlineCode: {
       color: '#171717',
       fontSize: '0.75em',

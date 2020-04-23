@@ -6,8 +6,7 @@
     "now-build": "mdx-deck build deck.mdx"
   },
   "private": true,
-  "version": "1.7.0",
-  "description": "gatsby webinar presentation",
+  "description": "The story Carbon’s gatsby theme",
   "main": "deck.mdx",
   "license": "MIT",
   "dependencies": {

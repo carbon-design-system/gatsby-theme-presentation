@@ -37,8 +37,9 @@ import chart from "./compare-cra-gatsby-next.png";
 
 <Notes>
 
-- Static site generator
-- in the same space as Next.js, create-react-app (meta framework)
+- Static site generator that uses React, in the same space as Next.js, create-react-app
+- js/css performance optimizations and polyfills
+- extremely rich plugin ecosystem from detecting broken links to powering client-side search
 
 </Notes>
 
@@ -146,13 +147,15 @@ Last note === Progressive disclosure of complexity, NO BLOCKERS
 
 # core shell: site wide search
 
+# MDX = markdown that permits react components
+
 </Notes>
 
 ---
 
 <Demo
   src="https://gatsby-theme-carbon.now.sh/components/Accordion"
-  title="Gatsby Theme Carbon MDX components"
+  title="gatsby-theme-carbon MDX components"
 />
 
 <Notes>
@@ -163,7 +166,7 @@ Last note === Progressive disclosure of complexity, NO BLOCKERS
 
 ---
 
-### What is shadowing? _or_ “Why the theme can't be a blocker”
+### <div style={{textAlign: 'center'}}>What is shadowing? _or..._<br />“Why the theme can't be a blocker”</div>
 
 - allows developers to modify or replace any theme file
 - shadowed files go in `src/gatsby-theme-carbon/`
@@ -219,25 +222,13 @@ Last note === Progressive disclosure of complexity, NO BLOCKERS
 
 ---
 
-<Demo src="https://www.carbondesignsystem.com" title="Carbon" />
+<Demo src="https://www.carbondesignsystem.com" title="Carbon Design System" />
 
 <Notes>
 
 ## Sitewide search
 
-## Feedback (forms), serverless function
-
-</Notes>
-
----
-
-<Demo src="https://www.ibm.com/design/language" title="IBM Design Language" />
-
-<Notes>
-
-- ## Switcher
-- ## Bespoke components like icon search
-- ## Familiar navigation/IA
+## Feedback (forms), serverless functions
 
 </Notes>
 
@@ -245,13 +236,18 @@ Last note === Progressive disclosure of complexity, NO BLOCKERS
 
 <Demo
   src="https://pages.github.ibm.com/ibmcloud/pal/"
-  title="IBM Cloud pattern asset library"
+  title="IBM Cloud’s pattern asset library"
 />
+
+---
+
+<Demo src="https://www.ibm.com/design/language" title="IBM Design Language" />
 
 <Notes>
 
-- Signature homepage
-- ## a11y (skip to content, tab control, return to top)
+## Switcher – familiar, shared core
+
+## Icon Search complex components
 
 </Notes>
 
@@ -259,10 +255,10 @@ Last note === Progressive disclosure of complexity, NO BLOCKERS
 
 # More examples
 
-- [IBM Brand center](https://ibm.com/brand)
-- [IBM Garage Cloud Native Bootcamp](https://pages.github.ibm.com/CASE/cloudnative-bootcamp/)
 - [IBM Design for AI](https://ibm.com/design/research)
+- [IBM Brand center](https://ibm.com/brand)
 - [IBM Event Design](https://www.ibm.com/design/event/)
+- [IBM Garage Cloud Native Bootcamp](https://pages.github.ibm.com/CASE/cloudnative-bootcamp/)
 
 ---
 
@@ -296,7 +292,10 @@ Last note === Progressive disclosure of complexity, NO BLOCKERS
 
 # More info
 
-- https://gatsby-theme-carbon.now.sh
-- <a href="https://ibm-studios.slack.com/messages/carbon-gatsby-theme">
-    #gatsby-theme-carbon
-  </a> slack channel
+- website: https://gatsby-theme-carbon.now.sh
+- GitHub: <a href="https://github.com/carbon-design-system/gatsby-theme-carbon">
+  carbon-design-system/gatsby-theme-carbon
+  </a>
+- Slack: <a href="https://ibm-studios.slack.com/messages/carbon-gatsby-theme">
+  #gatsby-theme-carbon
+  </a>
