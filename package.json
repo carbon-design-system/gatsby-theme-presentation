@@ -1,5 +1,6 @@
 {
   "name": "gatsby-themes-at-ibm",
+  "version": "2.0.0",
   "scripts": {
     "dev": "mdx-deck deck.mdx",
     "build": "mdx-deck build deck.mdx",
