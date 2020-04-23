@@ -7,7 +7,7 @@ li p {
 }
 
 ul {
-  list-style: "↳ ";
+  list-style: "– ";
 }
 
 @font-face {
