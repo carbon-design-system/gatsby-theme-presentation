@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-fed",
+  "name": "gatsby-themes-at-ibm",
   "scripts": {
     "dev": "mdx-deck deck.mdx",
     "build": "mdx-deck build deck.mdx",
